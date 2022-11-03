@@ -1,0 +1,48 @@
+@import '../../../styles/vars';
+
+.videoFashion {
+  background-color: $bg;
+  background-image: url('../../../public//images/decor/Pattern.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding: 125px 0;
+}
+.inner {
+  display: flex;
+}
+.popup {
+  margin-right: 64px;
+  max-width: 566px;
+  width: 100%;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url('../../../public/images/fashionvideo.jpg');
+}
+.content {
+  max-width: 570px;
+}
+.subtitle {
+  padding-top: 75px;
+  font-size: 22px;
+  line-height: 26px;
+  color: $accent;
+  text-transform: uppercase;
+  @extend %quicksand-500;
+  margin-bottom: 18px;
+}
+.title {
+  text-align: left;
+  margin-bottom: 40px;
+}
+.text {
+  margin-bottom: 55px;
+}
+.link {
+  @extend %btn;
+}

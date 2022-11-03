@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Header.module.scss';
 
 const menuList: string[] = ['HOME', 'SHOP', 'PAGE', 'BLOG', 'CONTACT'];
@@ -8,7 +9,7 @@ const Header = () => {
     <header>
       <div className="container">
         <div className={styles.inner}>
-          <a className="logo" href=" ">
+          <Link className="logo" href="/">
             <Image
               width={183}
               height={30}
@@ -16,7 +17,7 @@ const Header = () => {
               src="/images/logo.png"
               alt="logo"
             />
-          </a>
+          </Link>
           <nav>
             <button className={styles.btn}>
               <span></span>

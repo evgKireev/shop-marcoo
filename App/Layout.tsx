@@ -10,6 +10,7 @@ const Layout: React.FC<LayoutType> = ({ children }) => {
   return (
     <>
       <Header />
+
       {children}
       <Footer />
     </>

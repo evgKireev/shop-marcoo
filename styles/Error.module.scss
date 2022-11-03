@@ -1,0 +1,40 @@
+@import '../styles/vars';
+
+.page {
+  padding: 118px 0;
+}
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  max-width: 570px;
+  width: 100%;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 52px;
+  color: #28384f;
+  @extend%roboto-700;
+  margin-bottom: 40px;
+}
+.text {
+  max-width: 470px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #8d8d8d;
+  @extend%quicksand-500;
+  margin-bottom: 60px;
+}
+.link {
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  @extend%roboto-400;
+  background-color: $accent;
+  padding: 18px 33px;
+  filter: drop-shadow(0px 5px 12.5px rgba(254, 62, 87, 0.35));
+}

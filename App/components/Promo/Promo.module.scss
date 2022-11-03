@@ -1,0 +1,39 @@
+@import '../../../styles/vars';
+
+.topSlider {
+  background-image: url('../../../public/images/decor/shape.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $bg;
+  padding: 65px 0px;
+}
+.container {
+  max-width: 1520px;
+}
+.item {
+  display: flex !important;
+  justify-content: space-between;
+}
+.content {
+  padding-left: 157px;
+  padding-top: 125px;
+}
+.title {
+  font-size: 58px;
+  line-height: 68px;
+  @extend %roboto-700;
+  color: $title;
+  max-width: 670px;
+  margin-bottom: 35px;
+}
+.text {
+  margin-bottom: 55px;
+  max-width: 470px;
+}
+.link {
+  @extend %btn;
+  font-size: 16px;
+  letter-spacing: 3px;
+  line-height: 26px;
+  padding: 14px 36px;
+}

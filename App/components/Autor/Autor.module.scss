@@ -1,0 +1,40 @@
+@import '../../../styles/vars';
+.item {
+  padding: 35px 30px 40px;
+  border: 1px solid #ececec;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.title {
+  text-transform: uppercase;
+  color: $title;
+  font-size: 22px;
+  @extend%roboto-400;
+  margin-bottom: 25px;
+}
+
+.avatar {
+  object-fit: cover;
+  margin: 0 auto;
+  display: inline-block;
+  margin-bottom: 35px;
+}
+.name {
+  color: $title;
+  font-size: 18px;
+  @extend%roboto-700;
+}
+.position {
+  color: $accent;
+  margin-bottom: 25px;
+}
+.social {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+  li:hover {
+    color: $accent;
+  }
+}

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { ReactElement } from 'react';
 import styles from './LayoutContainer.module.scss';
 
@@ -13,9 +14,6 @@ const LayoutContainer: React.FC<LayoutContainerType> = ({
 }) => {
   return (
     <>
-      <Head>
-        <title>Contacts</title>
-      </Head>
       <section className="top">
         <div className={styles.container}>
           <div className="container">
@@ -23,9 +21,9 @@ const LayoutContainer: React.FC<LayoutContainerType> = ({
             <div className="breadcrumbs">
               <ul className="breadcrumbs__list">
                 <li className="breadcrumbs__item">
-                  <a className="breadcrumbs__link" href="">
+                  <Link className="breadcrumbs__link" href="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="breadcrumbs__item">
                   <a className="breadcrumbs__link" href="">

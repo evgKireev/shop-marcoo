@@ -1,8 +1,15 @@
+import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Header.module.scss';
 
-const menuList: string[] = ['HOME', 'SHOP', 'PAGE', 'BLOG', 'CONTACT'];
+const menuList = [
+  { title: 'HOME', url: '/' },
+  { title: 'SHOP', url: 'shop' },
+  { title: 'PAGE', url: 'page' },
+  { title: 'BLOG', url: 'blog' },
+  { title: 'CONTACT', url: 'contact' },
+];
 
 const Header = () => {
   return (
@@ -10,13 +17,7 @@ const Header = () => {
       <div className="container">
         <div className={styles.inner}>
           <Link className="logo" href="/">
-            <Image
-              width={183}
-              height={30}
-              className="logo__img"
-              src="/images/logo.png"
-              alt="logo"
-            />
+            <Image width={183} height={30} src="/images/logo.png" alt="logo" />
           </Link>
           <nav>
             <button className={styles.btn}>
@@ -24,10 +25,10 @@ const Header = () => {
             </button>
             <ul className={styles.list}>
               {menuList.map((el, index) => (
-                <li key={index} className={styles.menuListItem}>
-                  <a className={styles.listLink} href="#">
-                    {el}
-                  </a>
+                <li key={index} className={classNames(styles.menuListItem)}>
+                  <Link className={styles.listLink} href={el.url}>
+                    {el.title}
+                  </Link>
                 </li>
               ))}
             </ul>

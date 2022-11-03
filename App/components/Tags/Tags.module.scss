@@ -1,0 +1,32 @@
+@import '../../../styles/vars';
+.item {
+  padding: 35px 30px 40px;
+  border: 1px solid #ececec;
+  margin-bottom: 40px;
+}
+
+.title {
+  text-transform: uppercase;
+  color: #29282d;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.label {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.input {
+  @extend%checkbox-hidden;
+  &:checked + .checkbox {
+    background-color: $accent;
+    border-color: $accent;
+    color: #fff;
+  }
+}
+.checkbox {
+  border: 1px solid #8d8d8d;
+  padding: 10px 16px;
+}

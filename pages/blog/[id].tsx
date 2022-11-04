@@ -1,7 +1,15 @@
-import Image from 'next/image';
-import OneNews, { OneNewsLong } from '../OneNews';
-import styles from './News.module.scss';
-
+import Head from 'next/head';
+import Autor from '../../App/components/Autor';
+import Categories from '../../App/components/Categories';
+import LayoutContainer from '../../App/components/LayoutContainer';
+import OneNews, {
+  OneNewsLong,
+  OneNewsSize,
+} from '../../App/components/OneNews';
+import Search from '../../App/components/Search';
+import Tags from '../../App/components/Tags';
+import { useRouter } from 'next/router';
+import styles from '../../styles/OneBlog.module.scss';
 const news = [
   {
     id: 1,
@@ -32,33 +40,42 @@ const news = [
   },
 ];
 
-const News = () => {
+const OneBlog = () => {
   return (
-    <section className={styles.news}>
-      <div className="container">
-        <h3 className="title">From Our Blog</h3>
-        <p className={styles.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmodmoe tempor incididunt ut labore et dolore aliqua.
-        </p>
-        <div className={styles.items}>
-          {news.map((el, index) => (
-            <OneNews
-              key={index}
-              title={el.title}
-              images={el.images}
-              linkText="Read More->"
-              width={370}
-              height={288}
-              id={el.id}
-              text={el.text}
-              long={OneNewsLong.Small}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
+    <>
+      <Head>
+        <title>Blog</title>
+      </Head>
+      <LayoutContainer title="Blog">
+        <section className={styles.blog}>
+          <div className="container">
+            <div className={styles.inner}>
+              <div className={styles.content}>
+                <OneNews
+                  id={news[0].id}
+                  title={news[0].title}
+                  images={news[0].images}
+                  width={770}
+                  height={450}
+                  desc={news[0].desc}
+                  size={OneNewsSize.Large}
+                  text={news[0].text}
+                  blockquote={news[0].blockquote}
+                  long={OneNewsLong.Large}
+                />
+              </div>
+              <div className={styles.aside}>
+                <Search />
+                <Autor />
+                <Categories />
+                <Tags />
+              </div>
+            </div>
+          </div>
+        </section>
+      </LayoutContainer>
+    </>
   );
 };
 
-export default News;
+export default OneBlog;

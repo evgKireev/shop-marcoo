@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ReactElement } from 'react';
 import styles from './LayoutContainer.module.scss';
 
+
 type LayoutContainerType = {
   children: ReactElement;
   title: string;

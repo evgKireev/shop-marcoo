@@ -1,0 +1,46 @@
+@import '/styles/vars';
+.comments-form {
+  border-bottom: none;
+}
+
+.title {
+  margin-bottom: 25px;
+  color: $title;
+  font-size: 24px;
+  @extend%roboto-700;
+  text-transform: uppercase;
+  
+}
+
+.comments {
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.img {
+  min-width: 71px;
+  height: 71px;
+  margin-right: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.top {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.name {
+  color: #29282d;
+  margin-right: 13px;
+}
+
+.data {
+  padding-left: 13px;
+  border-left: 1px solid #8d8d8d;
+}
+
+.text {
+  margin-bottom: 20px;
+}

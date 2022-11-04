@@ -1,25 +1,28 @@
-import LayoutContainer from '../App/components/LayoutContainer';
-import OneNews from '../App/components/OneNews';
-import Search from '../App/components/Search';
-import Autor from '../App/components/Autor';
-import styles from '../styles/Blog.module.scss';
-import Categories from '../App/components/Categories';
-import Tags from '../App/components/Tags';
-import { OneNewsSize } from '../App/components/OneNews';
+import LayoutContainer from '../../App/components/LayoutContainer';
+import OneNews, { OneNewsLong } from '../../App/components/OneNews';
+import Search from '../../App/components/Search';
+import Autor from '../../App/components/Autor';
+import styles from '../../styles/Blog.module.scss';
+import Categories from '../../App/components/Categories';
+import Tags from '../../App/components/Tags';
+import { OneNewsSize } from '../../App/components/OneNews';
 import Head from 'next/head';
 
 const news = [
   {
+    id: 1,
     images: '/images/news/1news.jpg',
     title: 'Our Apps User Use Mobile On His Mobile',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodoami viverra maycenas acchmsan lacus vel facilisis.',
   },
   {
+    id: 2,
     images: '/images/news/2news.jpg',
     title: 'Our Apps User Use Mobile On His Mobile',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodoami viverra maycenas acchmsan lacus vel facilisis.',
   },
   {
+    id: 3,
     images: '/images/news/3news.jpg',
     title: 'Our Apps User Use Mobile On His Mobile',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodoami viverra maycenas acchmsan lacus vel facilisis.',
@@ -39,6 +42,8 @@ const Blog = () => {
               <div className={styles.content}>
                 {news.map((el, index) => (
                   <OneNews
+                    long={OneNewsLong.Small}
+                    id={el.id}
                     key={index}
                     title={el.title}
                     images={el.images}

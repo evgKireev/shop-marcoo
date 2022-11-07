@@ -18,7 +18,7 @@ const category = [
     caunter: 5,
   },
   {
-    text: 'Hot Dresses<',
+    text: 'Hot Dresses',
     caunter: 8,
   },
   {

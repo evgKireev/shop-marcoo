@@ -1,0 +1,23 @@
+@import '../../../styles/vars';
+.item {
+  padding: 35px 30px 40px;
+  border: 1px solid #ececec;
+  margin-bottom: 40px;
+}
+.title {
+    text-transform: uppercase;
+    color: #29282d;
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+.btn {
+  @extend%btn;
+  border: none;
+}

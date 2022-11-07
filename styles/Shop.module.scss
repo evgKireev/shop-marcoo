@@ -1,0 +1,51 @@
+@import './vars';
+.shop {
+  padding: 120px 0 105px;
+}
+.inner {
+  display: flex;
+}
+.filters {
+  width: 370px;
+  margin-right: 30px;
+}
+
+.shopContent {
+  width: 100%;
+}
+.contentInner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.filter {
+  border: 1px solid #ececec;
+  padding: 20px 25px 20px 30px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filterButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0;
+}
+.filterBtn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-left: 15px;
+  cursor: pointer;
+  &:hover {
+    color: $accent;
+  }
+}
+
+
+.active {
+  color: $accent;
+}

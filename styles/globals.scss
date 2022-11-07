@@ -89,7 +89,8 @@ a {
       }
     }
     .product-page-one__text {
-      margin-bottom: 25px;
+      padding: 25px 0;
+      line-height: 18px;
     }
     .product-page-one__link-box {
       background-color: transparent;
@@ -125,9 +126,11 @@ a {
     .product-page-one__title {
       order: -1;
       width: 100%;
+      margin-bottom: 15px;
       padding: 0;
-      margin-bottom: 10px;
     }
+
+ 
     .product-page-one__price {
       order: -1;
       margin: -12px;

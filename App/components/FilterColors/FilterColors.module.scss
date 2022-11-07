@@ -1,0 +1,54 @@
+@import './/../../../styles/vars';
+
+.item {
+  padding: 35px 30px 40px;
+  border: 1px solid #ececec;
+  margin-bottom: 40px;
+}
+.title {
+  text-transform: uppercase;
+  color: #29282d;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.label {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  justify-content: space-between;
+}
+.input {
+  @extend%checkbox-hidden;
+  &:checked + .checkbox {
+    background-image: url('../../../public/images/icons/checbox.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+.checkbox {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  margin-left: -16px;
+  margin-top: 6px;
+}
+.blue {
+  background-color: #00aeef;
+}
+.red {
+  background-color: #f52574;
+}
+.green {
+  background-color: #24d4ac;
+}
+.orange {
+  background-color: #ff7e00;
+}
+.black {
+  background-color: #000;
+}
+.purple {
+  background-color: #923899;
+}

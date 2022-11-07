@@ -15,10 +15,11 @@ const comments = [
   },
 ];
 
+
 const Comments = () => {
   return (
     <div>
-      <div className={styles.title}>{`O${comments.length} COMMENTS`}</div>
+      {/* <div className={styles.title}>{`O${comments.length} COMMENTS`}</div> */}
       {comments.map((el, index) => (
         <div key={index} className={styles.comments}>
           <Image

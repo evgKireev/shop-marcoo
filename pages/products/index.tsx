@@ -61,6 +61,7 @@ const Products = () => {
                       key={index}
                       images={el.images}
                       check={checkBtn}
+                      id={el.id}
                     />
                   ))}
                 </div>

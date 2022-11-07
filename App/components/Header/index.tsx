@@ -5,8 +5,7 @@ import styles from './Header.module.scss';
 
 const menuList = [
   { title: 'HOME', url: '/' },
-  { title: 'SHOP', url: '/shop' },
-  { title: 'PAGE', url: '/page' },
+  { title: 'SHOP', url: '/products' },
   { title: 'BLOG', url: '/blog' },
   { title: 'CONTACT', url: '/contact' },
 ];

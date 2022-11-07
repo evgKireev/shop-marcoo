@@ -1,0 +1,81 @@
+@import '../../../styles/vars';
+
+.content {
+  width: 370px;
+}
+
+.title {
+  margin-bottom: 20px;
+  color: $title;
+  font-size: 20px;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+.price {
+  display: flex;
+  font-size: 18px;
+}
+.priceNew {
+  color: $title;
+}
+.priceOld {
+  padding-left: 15px;
+  text-decoration: line-through;
+}
+.star {
+  display: flex;
+  align-items: center;
+  span {
+    padding-left: 8px;
+    color: $title;
+    font-size: 22px;
+  }
+}
+.text {
+  margin-bottom: 40px;
+  span {
+    display: block;
+    color: $title;
+    @extend%roboto-400;
+    font-size: 18px;
+  }
+}
+.btn {
+  @extend%btn;
+  border: none;
+  margin-left: 15px;
+}
+
+.itemBtn {
+  border: none;
+  margin-left: 15px;
+  background-color: #fe3e57;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 12px 26px;
+  filter: drop-shadow(0px 10px 12.5px rgba(254, 62, 87, 0.3));
+  cursor: pointer;
+}
+
+.containerBtn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  color: #fe3e57;
+
+}
+
+.itemBTN {
+  border: none;
+  background-color: #fff;
+  text-transform: uppercase;
+  color: #fe3e57;
+  padding: 12px 26px;
+  cursor: pointer;
+  border: 1px solid #fe3e57;
+}

@@ -1,0 +1,40 @@
+@import '../../../styles/vars';
+.productTabs {
+  padding-top: 110px;
+}
+.top {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.topItem {
+  color: $defaul;
+  @extend%roboto-400;
+  font-size: 22px;
+  display: inline-block;
+  margin-bottom: 10px;
+  & + .topItem {
+    margin-left: 55px;
+  }
+}
+.activeTitle {
+  color: $title;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $accent;
+    bottom: -11px;
+    left: 0;
+    right: 0;
+  }
+}
+.contentItem {
+  display: none;
+  
+}
+
+.active {
+    display: block;
+  }

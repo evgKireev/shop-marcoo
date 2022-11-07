@@ -13,7 +13,7 @@ const Product = () => {
         <div className="product__items">
           {products.map((el, index) => {
             if (index < 6) {
-              return <ProductOne key={index} images={el.images} />;
+              return <ProductOne id={el.id} key={index} images={el.images} check />;
             }
           })}
         </div>

@@ -68,7 +68,7 @@ const CategoriesInfo = () => {
             </p>
             <div className={styles.items}>
               {categories.map((el, index) => (
-                <div className={styles.item}>
+                <div key={index} className={styles.item}>
                   <div className={styles.subtitle}>{el.subTitle}</div>
                   <h4 className={styles.title}>{el.title}</h4>
                   <a className={styles.link} href="#">
@@ -85,5 +85,3 @@ const CategoriesInfo = () => {
 };
 
 export default CategoriesInfo;
-
-// "background-image: url(images/content/categories/foto1.jpg);"

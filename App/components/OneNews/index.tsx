@@ -42,7 +42,7 @@ const OneNews: React.FC<OneNewsType> = ({
   text,
   long,
 }) => {
-  const bigNews = long === OneNewsLong.Large
+  const bigNews = long === OneNewsLong.Large;
   return (
     <>
       <div className={classNames(styles.item, { [styles.largeItem]: size })}>
@@ -67,6 +67,9 @@ const OneNews: React.FC<OneNewsType> = ({
           <p className={classNames(styles.text, { [styles.largeText]: size })}>
             {desc}
           </p>
+          <a className={styles.itemLink} href="#">
+            {linkText}
+          </a>
           {bigNews ? (
             <div>
               <blockquote className={styles.blockquote}>
@@ -81,9 +84,6 @@ const OneNews: React.FC<OneNewsType> = ({
                 alt=""
               />
               <p className={styles.largeText}>{text}</p>
-              <a className={styles.itemLink} href="#">
-                {linkText}
-              </a>
             </div>
           ) : null}
         </div>
@@ -104,7 +104,7 @@ const OneNews: React.FC<OneNewsType> = ({
             </div>
           </div>
           <Comments />
-          <CommentForm />
+          <CommentForm title="LEAVE A REPLY" text="POST COMMENT" />
         </>
       ) : null}
     </>

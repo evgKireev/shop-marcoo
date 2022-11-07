@@ -1,0 +1,26 @@
+@import '../../../styles/vars';
+
+.list {
+  margin-bottom: 30px;
+}
+.item {
+  margin-bottom: 5px;
+  display: flex;
+}
+.title {
+  min-width: 100px;
+  color: $title;
+}
+.link {
+  path {
+    fill: $defaul;
+  }
+  & + .link {
+    margin-left: 15px;
+  }
+  &:hover {
+    path {
+      fill: $accent;
+    }
+  }
+}

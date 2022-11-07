@@ -1,14 +1,16 @@
 import { BiSearch } from 'react-icons/bi';
 import { AiOutlineShopping, AiOutlineHeart } from 'react-icons/ai';
+import Link from 'next/link';
 import Image from 'next/image';
 import classNames from 'classnames';
 
 type ProductOne = {
   images: string;
   check: boolean;
+  id: number;
 };
 
-const ProductOne: React.FC<ProductOne> = ({ images, check }) => {
+const ProductOne: React.FC<ProductOne> = ({ images, check, id }) => {
   return (
     <div
       className={classNames('product-page-one', {
@@ -24,9 +26,9 @@ const ProductOne: React.FC<ProductOne> = ({ images, check }) => {
           className="product-page-one__images"
         />
         <div className="product-page-one__link-box">
-          <a className="product-page-one__link" href="#">
+          <Link className="product-page-one__link" href={`products/${id}`}>
             <BiSearch />
-          </a>
+          </Link>
           <a
             className="product-page-one__link product-page-one__link--line"
             href="#"

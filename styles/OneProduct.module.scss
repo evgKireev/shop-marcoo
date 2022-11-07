@@ -1,0 +1,47 @@
+@import '/styles/vars';
+
+.productPage {
+  padding: 120px 0 0;
+}
+
+.inner {
+  display: flex;
+}
+.slide {
+  width: 730px;
+  margin-right: 70px;
+}
+
+.productSlide {
+  display: flex;
+}
+
+.thumb {
+  width: 140px;
+  margin-right: 30px;
+}
+.thumbItem {
+  margin-bottom: 30px;
+  width: 140px;
+  height: 140px;
+  cursor: pointer;
+  img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+}
+.big {
+  width: 560px;
+  height: 650px;
+}
+.bigItem {
+  width: 560px;
+  height: 650px;
+}
+.img {
+  width: 560px;
+  height: 650px;
+  object-fit: cover;
+}

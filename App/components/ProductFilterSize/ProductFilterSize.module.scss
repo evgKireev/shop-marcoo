@@ -1,0 +1,28 @@
+@import '../../../styles/vars';
+
+.size {
+  margin-bottom: 25px;
+}
+.sizeLabel {
+  margin-right: 10px;
+}
+.sizeTitle {
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: $title;
+  @extend%roboto-400;
+}
+.sizeInput {
+  @extend%radio-hidden;
+  &:checked {
+    & + .sizeRadio {
+      border-color: $accent;
+    }
+  }
+}
+.sizeRadio {
+  padding: 4px 12px;
+  border: 1px solid #ccccce;
+  display: inline-block;
+  cursor: pointer;
+}

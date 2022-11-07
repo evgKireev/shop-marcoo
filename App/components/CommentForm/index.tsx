@@ -1,10 +1,15 @@
 import styles from './CommentForm.module.scss';
 
-const CommentForm = () => {
+type CommentFormType = {
+  title: string;
+  text: string;
+};
+
+const CommentForm: React.FC<CommentFormType> = ({ title, text }) => {
   return (
     <>
       <form action="#">
-        <p className={styles.formTitle}>LEAVE A REPLY</p>
+        <p className={styles.formTitle}>{title}</p>
         <div className={styles.boxInput}>
           <input
             className={styles.textInput}
@@ -21,7 +26,7 @@ const CommentForm = () => {
           className={styles.textarea}
           placeholder="Your text here"
         ></textarea>
-        <button className={styles.btn}>POST COMMENT</button>
+        <button className={styles.btn}>{text}</button>
       </form>
     </>
   );

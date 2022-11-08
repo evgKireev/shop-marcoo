@@ -67,9 +67,9 @@ const OneNews: React.FC<OneNewsType> = ({
           <p className={classNames(styles.text, { [styles.largeText]: size })}>
             {desc}
           </p>
-          <a className={styles.itemLink} href="#">
+          <Link className={styles.itemLink} href={`blog/${id}`}>
             {linkText}
-          </a>
+          </Link>
           {bigNews ? (
             <div>
               <blockquote className={styles.blockquote}>

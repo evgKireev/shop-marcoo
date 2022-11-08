@@ -42,6 +42,7 @@ const Blog = () => {
               <div className={styles.content}>
                 {news.map((el, index) => (
                   <OneNews
+                    linkText="Read More->"
                     long={OneNewsLong.Small}
                     id={el.id}
                     key={index}

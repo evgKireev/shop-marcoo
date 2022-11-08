@@ -1,0 +1,54 @@
+@import '_vars.scss';
+
+.modal {
+  max-width: 570px;
+  margin: 0 auto 115px;
+  padding-top: 100px;
+}
+.links {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.link {
+  font-size: 22px;
+  color: #909090;
+  @extend%roboto-400;
+  text-transform: uppercase;
+  margin: 0 30px;
+}
+.linkActive {
+  color: $accent;
+}
+.label {
+  margin-bottom: 30px;
+  display: block;
+}
+.input {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: $bg;
+  margin-top: 4px;
+  height: 60px;
+  padding: 0 15px;
+}
+.btn {
+  display: block;
+  background-color: $title;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #ffffff;
+  @extend %roboto-400;
+  cursor: pointer;
+  border: none;
+  padding: 14px 0;
+  width: 100%;
+}
+.error {
+  margin-top: 12px;
+  color: $accent;
+  display: inline-block;
+}
+.text {
+  margin-bottom: 40px;
+}

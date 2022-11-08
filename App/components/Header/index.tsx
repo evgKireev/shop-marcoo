@@ -33,7 +33,7 @@ const Header = () => {
             </ul>
           </nav>
           <div className={styles.userNav}>
-            <a className={styles.userNavLink} href="#">
+            <Link className={styles.userNavLink} href="/register">
               <Image
                 width={25}
                 height={25}
@@ -41,7 +41,7 @@ const Header = () => {
                 alt="user icon"
                 className="user-nav__link-img"
               />
-            </a>
+            </Link>
             <a className={styles.userNavLink} href="#">
               <Image
                 width={25}

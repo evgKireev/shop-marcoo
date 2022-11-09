@@ -3,10 +3,42 @@ import Head from 'next/head';
 import LayoutContainer from '../../App/components/LayoutContainer';
 import ProductContent from '../../App/components/ProductContent';
 import ProductTabs from '../../App/components/ProductTabs';
-import { products } from '../../App/data/products';
 import styles from '../../styles/OneProduct.module.scss';
+import { productsType } from '../../App/@types';
 
-const OneProduct = () => {
+type ProductType = {
+  product: productsType;
+};
+
+export async function getStaticPaths() {
+  const res = await fetch(`https://636ba8d7ad62451f9fb81c41.mockapi.io/marcoo`);
+  const data = await res.json();
+
+  const paths = data.map((el: any) => ({ params: { id: el.id.toString() } }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export const getStaticProps = async (context: { params: { id: number } }) => {
+  const { id } = context.params;
+  const res = await fetch(
+    `https://636ba8d7ad62451f9fb81c41.mockapi.io/marcoo/${id}`
+  );
+  const data = await res.json();
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+  return {
+    props: { product: data },
+  };
+};
+
+const OneProduct: React.FC<ProductType> = ({ product }) => {
   return (
     <>
       <Head>
@@ -20,17 +52,16 @@ const OneProduct = () => {
                 <div className={classNames(styles.slide, styles.productSlide)}>
                   <div className={styles.thumb}>
                     <div className={styles.thumbItem}>
-                      <img src={products[0].images} alt="thumb img" />
-                      <img src={products[0].images} alt="thumb img" />
-                      <img src={products[0].images} alt="thumb img" />
-                      <img src={products[0].images} alt="thumb img" />
+                      {product.images.map((el) => (
+                        <img src={el} alt="thumb img" />
+                      ))}
                     </div>
                   </div>
                   <div className={styles.big}>
                     <div className={styles.bigItem}>
                       <img
+                        src={product.images[0]}
                         className={styles.img}
-                        src={products[0].images}
                         alt="big img"
                       />
                     </div>

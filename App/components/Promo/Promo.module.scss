@@ -36,4 +36,13 @@
   letter-spacing: 3px;
   line-height: 26px;
   padding: 14px 36px;
+  border: 1px solid transparent;
+  transition: all .5s;
+
+  &:hover {
+    color: $accent;
+    border: 1px solid #fff;
+    background-color: #fff;
+    transition: all .5s;
+  }
 }

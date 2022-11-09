@@ -1,5 +1,8 @@
 import styles from './Partners.module.scss';
 import Image from 'next/image';
+
+
+
 const Partners = () => {
   return (
     <div className={styles.partners}>

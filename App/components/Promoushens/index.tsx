@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Promoushens.module.scss';
 
 const Promoushens = () => {
@@ -9,25 +10,25 @@ const Promoushens = () => {
           <h3 className="title">DEAL OF THE DAY</h3>
           <div className={styles.clock} data-time="'2022-02-20'">
             <div className={styles.clockItem}>
-              <span className={styles.days}></span>
+              <span className={styles.days}>12</span>
               <div className={styles.text}>Days</div>
             </div>
             <div className={styles.clockItem}>
-              <span></span>
+              <span>02</span>
               <div>Hours</div>
             </div>
             <div className={styles.clockItem}>
-              <span></span>
+              <span>05</span>
               <div>Minutes</div>
             </div>
             <div className={styles.clockItem}>
-              <span></span>
+              <span>05</span>
               <div>Seconds</div>
             </div>
           </div>
-          <a className={styles.link} href="#">
+          <Link className={styles.link} href="products">
             SHOP NOW
-          </a>
+          </Link>
         </div>
       </div>
     </div>

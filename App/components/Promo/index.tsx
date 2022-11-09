@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Promo.module.scss'
 
 const Promo = () => {
@@ -16,9 +17,9 @@ const Promo = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 et dolore magna aliqua. Ipsum.
               </p>
-              <a className={styles.link} href="#">
+              <Link className={styles.link} href="products">
                 BUY NOW
-              </a>
+              </Link>
             </div>
             <Image
               width={655}

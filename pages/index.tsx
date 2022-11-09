@@ -5,10 +5,29 @@ import VideoBlock from '../App/components/VideoBlock';
 import News from '../App/components/News';
 import Partners from '../App/components/Partners';
 import Promoushens from '../App/components/Promoushens';
-import styles from '../styles/Home.module.scss';
 import Product from '../App/components/Product';
+import { productsType } from '../App/@types';
 
-export default function Home() {
+type ProductType = {
+  products: productsType[];
+};
+
+export const getStaticProps = async () => {
+  const res = await fetch(
+    `https://636ba8d7ad62451f9fb81c41.mockapi.io/marcoo/`
+  );
+  const data = await res.json();
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+  return {
+    props: { products: data },
+  };
+};
+
+const Home: React.FC<ProductType> = ({ products }) => {
   return (
     <div>
       <Head>
@@ -19,10 +38,12 @@ export default function Home() {
       <Promo />
       <CategoriesInfo />
       <VideoBlock />
-      <Product />
+      <Product products={products} />
       <Promoushens />
       <Partners />
       <News />
     </div>
   );
-}
+};
+
+export default Home;

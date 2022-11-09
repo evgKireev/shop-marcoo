@@ -59,6 +59,9 @@ a {
     border: 1px solid $accent;
     padding: 14px 27px;
     margin-top: 55px;
+    &:hover {
+      color: $accent;
+    }
   }
   &__text {
     text-align: center;
@@ -130,7 +133,6 @@ a {
       padding: 0;
     }
 
- 
     .product-page-one__price {
       order: -1;
       margin: -12px;
@@ -245,7 +247,6 @@ a {
     margin: 0 auto;
   }
 }
-
 
 .breadcrumbs {
   display: inline-flex;

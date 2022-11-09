@@ -105,7 +105,7 @@ const Footer = () => {
         </div>
         <div className={styles.footerButtom}>
           <p className="footer-buttom__copy ">
-            © 2019 CodeAstrology. All Rights Reserved.
+            © 2022 EvgeniyKireev. All Rights Reserved.
           </p>
           <div className={styles.acceptImg}>
             We Accept

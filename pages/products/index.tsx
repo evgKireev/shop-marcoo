@@ -7,15 +7,31 @@ import styles from '../../styles/Shop.module.scss';
 import FilterPrice from '../../App/components/FilterPrice';
 import FilterColors from '../../App/components/FilterColors';
 import FilterSize from '../../App/components/FilterSize';
-import { products } from '../../App/data/products';
 import ProductOne from '../../App/components/ProductOne';
 import { TfiViewListAlt, TfiViewGrid } from 'react-icons/tfi';
 import classNames from 'classnames';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { productsType } from '../api/products';
 
-const Products = () => {
+type ProductType = {
+  products: productsType[];
+};
+
+export const getStaticProps = async () => {
+  const res = await fetch(`https://636ba8d7ad62451f9fb81c41.mockapi.io/marcoo/`);
+  const data = await res.json();
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+  return {
+    props: { products: data },
+  };
+};
+
+const Products: React.FC<ProductType> = ({ products }) => {
   const [checkBtn, setCheckBtn] = useState(true);
-
   return (
     <>
       <Head>
@@ -57,12 +73,7 @@ const Products = () => {
                 </div>
                 <div className={classNames(styles.contentInner)}>
                   {products.map((el, index) => (
-                    <ProductOne
-                      key={index}
-                      images={el.images}
-                      check={checkBtn}
-                      id={el.id}
-                    />
+                    <ProductOne key={index} check={checkBtn} id={el.id} images={el.images[0]} />
                   ))}
                 </div>
               </div>

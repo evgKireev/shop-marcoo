@@ -1,7 +1,13 @@
 import ProductOne from '../ProductOne';
 import { products } from '../../data/products';
+import { productsType } from '../../@types';
+import Link from 'next/link';
 
-const Product = () => {
+type ProductType = {
+  products: productsType[];
+};
+
+const Product: React.FC<ProductType> = ({ products }) => {
   return (
     <section className="product">
       <div className="container">
@@ -13,13 +19,20 @@ const Product = () => {
         <div className="product__items">
           {products.map((el, index) => {
             if (index < 6) {
-              return <ProductOne id={el.id} key={index} images={el.images} check />;
+              return (
+                <ProductOne
+                  id={el.id}
+                  key={index}
+                  images={el.images[0]}
+                  check
+                />
+              );
             }
           })}
         </div>
-        <a className="product__link" href="# ">
+        <Link className="product__link" href="products">
           LOAD MORE
-        </a>
+        </Link>
       </div>
     </section>
   );

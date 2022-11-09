@@ -4,13 +4,21 @@ import Link from 'next/link';
 import Image from 'next/image';
 import classNames from 'classnames';
 
+
+
+
+
+
+
+
+
 type ProductOne = {
-  images: string;
   check: boolean;
   id: number;
+  images?: any;
 };
 
-const ProductOne: React.FC<ProductOne> = ({ images, check, id }) => {
+const ProductOne: React.FC<ProductOne> = ({ check, id, images }) => {
   return (
     <div
       className={classNames('product-page-one', {
@@ -18,7 +26,7 @@ const ProductOne: React.FC<ProductOne> = ({ images, check, id }) => {
       })}
     >
       <div className="product-page-one__img-box">
-        <Image
+        <img
           width={368}
           height={370}
           src={images}

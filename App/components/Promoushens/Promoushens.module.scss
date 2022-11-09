@@ -47,4 +47,10 @@
   border: 1px solid $accent;
   padding: 14px 27px;
   margin-top: 55px;
+  transition: all 0.5s;
+  &:hover {
+    color: #ffffff;
+    background-color: $accent;
+    transition: all 0.5s;
+  }
 }

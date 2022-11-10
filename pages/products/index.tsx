@@ -11,14 +11,16 @@ import ProductOne from '../../App/components/ProductOne';
 import { TfiViewListAlt, TfiViewGrid } from 'react-icons/tfi';
 import classNames from 'classnames';
 import React, { useState } from 'react';
-import { productsType } from '../api/products';
+import { productsType } from '../../App/@types';
 
 type ProductType = {
   products: productsType[];
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch(`https://636ba8d7ad62451f9fb81c41.mockapi.io/marcoo/`);
+  const res = await fetch(
+    `https://636ba8d7ad62451f9fb81c41.mockapi.io/marcoo/`
+  );
   const data = await res.json();
   if (!data) {
     return {
@@ -73,7 +75,12 @@ const Products: React.FC<ProductType> = ({ products }) => {
                 </div>
                 <div className={classNames(styles.contentInner)}>
                   {products.map((el, index) => (
-                    <ProductOne key={index} check={checkBtn} id={el.id} images={el.images[0]} />
+                    <ProductOne
+                      key={index}
+                      check={checkBtn}
+                      id={el.id}
+                      images={el.images[0]}
+                    />
                   ))}
                 </div>
               </div>
